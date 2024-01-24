@@ -1,0 +1,1463 @@
+I0123 17:54:56.276840 139941640753152 inference_utils.py:69] Parsing gin configuration.
+I0123 17:54:56.276937 139941640753152 inference_utils.py:71] Added Gin search path meliad_lib/meliad/transformer/configs
+I0123 17:54:56.277132 139941640753152 inference_utils.py:74] Loading Gin config file base_htrans.gin
+I0123 17:54:56.277166 139941640753152 inference_utils.py:74] Loading Gin config file size/medium_150M.gin
+I0123 17:54:56.277195 139941640753152 inference_utils.py:74] Loading Gin config file options/positions_t5.gin
+I0123 17:54:56.277223 139941640753152 inference_utils.py:74] Loading Gin config file options/lr_cosine_decay.gin
+I0123 17:54:56.277251 139941640753152 inference_utils.py:74] Loading Gin config file options/seq_1024_nocache.gin
+I0123 17:54:56.277277 139941640753152 inference_utils.py:74] Loading Gin config file geometry_150M_generate.gin
+I0123 17:54:56.277303 139941640753152 inference_utils.py:76] Overriding Gin param DecoderOnlyLanguageModelGenerate.output_token_losses=True
+I0123 17:54:56.277332 139941640753152 inference_utils.py:76] Overriding Gin param TransformerTaskConfig.batch_size=32
+I0123 17:54:56.277360 139941640753152 inference_utils.py:76] Overriding Gin param TransformerTaskConfig.sequence_length=128
+I0123 17:54:56.277386 139941640753152 inference_utils.py:76] Overriding Gin param Trainer.restore_state_variables=False
+I0123 17:54:56.277431 139941640753152 resource_reader.py:50] system_path_file_exists:base_htrans.gin
+E0123 17:54:56.277560 139941640753152 resource_reader.py:55] Path not found: base_htrans.gin
+I0123 17:54:56.277764 139941640753152 resource_reader.py:50] system_path_file_exists:trainer_configuration.gin
+E0123 17:54:56.277862 139941640753152 resource_reader.py:55] Path not found: trainer_configuration.gin
+I0123 17:54:56.284059 139941640753152 resource_reader.py:50] system_path_file_exists:size/medium_150M.gin
+E0123 17:54:56.284176 139941640753152 resource_reader.py:55] Path not found: size/medium_150M.gin
+I0123 17:54:56.284490 139941640753152 resource_reader.py:50] system_path_file_exists:options/positions_t5.gin
+E0123 17:54:56.284590 139941640753152 resource_reader.py:55] Path not found: options/positions_t5.gin
+I0123 17:54:56.284862 139941640753152 resource_reader.py:50] system_path_file_exists:options/lr_cosine_decay.gin
+E0123 17:54:56.284960 139941640753152 resource_reader.py:55] Path not found: options/lr_cosine_decay.gin
+I0123 17:54:56.285357 139941640753152 resource_reader.py:50] system_path_file_exists:options/seq_1024_nocache.gin
+E0123 17:54:56.285454 139941640753152 resource_reader.py:55] Path not found: options/seq_1024_nocache.gin
+I0123 17:54:56.289056 139941640753152 training_loop.py:334] ==== Training loop: initializing model ====
+I0123 17:54:56.399362 139941640753152 xla_bridge.py:660] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA
+I0123 17:54:56.400110 139941640753152 xla_bridge.py:660] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0123 17:54:56.406755 139941640753152 training_loop.py:335] Process 0 of 1
+I0123 17:54:56.406809 139941640753152 training_loop.py:336] Local device count = 1
+I0123 17:54:56.406851 139941640753152 training_loop.py:337] Number of replicas = 1
+I0123 17:54:56.406883 139941640753152 training_loop.py:339] Using random number seed 42
+I0123 17:54:56.906081 139941640753152 training_loop.py:359] Initializing the model.
+I0123 17:54:57.297831 139941640753152 decoder_stack.py:275] dstack: embeddings = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.298093 139941640753152 decoder_stack.py:316] dstack: scanning over 1 windows.
+I0123 17:54:57.298199 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298280 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298360 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298443 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298516 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298588 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298661 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298734 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298806 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298877 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.298948 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.299019 139941640753152 transformer_layer.py:657] tlayer: Skipping XL cache for mode init.
+I0123 17:54:57.299058 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.299103 139941640753152 decoder_stack.py:224] dstack: ---- Layer 0 ----
+I0123 17:54:57.299220 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.299260 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.299292 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.301358 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.306809 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.317676 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.317961 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.322417 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.333128 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.333186 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.333226 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.333261 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.333322 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.334520 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.334599 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.335323 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.337792 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.343639 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.345360 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.345441 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.345478 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.345540 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.345677 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.346014 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.346062 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.347984 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.348083 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.351005 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.351084 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.351586 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.361728 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.370658 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.370756 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.371060 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.371141 139941640753152 decoder_stack.py:224] dstack: ---- Layer 1 ----
+I0123 17:54:57.371253 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.371294 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.371326 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.373227 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.375744 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.381375 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.381633 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.384299 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.388129 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.388185 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.388221 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.388253 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.388315 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.388891 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.388966 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.389330 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.390119 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.392654 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.393285 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.393364 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.393401 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.393461 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.393590 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.393925 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.393970 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.395904 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.395995 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.398523 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.398603 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.399035 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.401349 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.403272 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.403366 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.403657 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.403736 139941640753152 decoder_stack.py:224] dstack: ---- Layer 2 ----
+I0123 17:54:57.403847 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.403887 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.403919 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.405833 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.408230 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.414230 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.414495 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.417187 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.421074 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.421129 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.421166 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.421198 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.421260 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.421827 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.421903 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.422274 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.423047 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.425589 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.426282 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.426358 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.426394 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.426453 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.426579 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.426907 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.426950 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.428879 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.428974 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.431514 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.431599 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.432089 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.434409 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.436334 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.436428 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.436721 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.436801 139941640753152 decoder_stack.py:224] dstack: ---- Layer 3 ----
+I0123 17:54:57.436911 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.436950 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.436982 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.438917 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.441323 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.446999 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.447265 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.449947 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.453761 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.453816 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.453852 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.453885 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.453946 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.454512 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.454588 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.454956 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.455734 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.458333 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.458961 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.459037 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.459073 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.459135 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.459267 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.459600 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.459644 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.461568 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.461667 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.464259 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.464344 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.464775 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.467062 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.468991 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.469085 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.469379 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.469459 139941640753152 decoder_stack.py:224] dstack: ---- Layer 4 ----
+I0123 17:54:57.469568 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.469607 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.469644 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.471573 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.473979 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.479650 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.479912 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.482655 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.486420 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.486475 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.486512 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.486544 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.486605 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.487183 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.487258 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.487620 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.488398 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.492129 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.492882 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.492962 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.492998 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.493061 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.493204 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.493561 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.493605 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.495566 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.495660 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.498278 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.498356 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.498791 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.501071 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.503062 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.503160 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.503460 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.503541 139941640753152 decoder_stack.py:224] dstack: ---- Layer 5 ----
+I0123 17:54:57.503655 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.503695 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.503727 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.505594 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.508004 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.513679 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.513947 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.516663 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.520462 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.520519 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.520556 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.520588 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.520648 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.521249 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.521325 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.521697 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.522486 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.524996 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.525609 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.525693 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.525729 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.525789 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.525917 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.526235 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.526278 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.528174 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.528269 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.530860 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.530939 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.531374 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.533712 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.535632 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.535731 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.536027 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.536106 139941640753152 decoder_stack.py:224] dstack: ---- Layer 6 ----
+I0123 17:54:57.536215 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.536254 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.536286 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.538138 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.540600 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.546256 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.546520 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.549181 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.553018 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.553072 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.553110 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.553144 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.553205 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.553782 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.553865 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.554227 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.555011 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.557512 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.558138 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.558215 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.558250 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.558312 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.558444 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.558768 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.558810 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.560778 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.560874 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.563380 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.563458 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.563889 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.566532 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.568428 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.568529 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.568822 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.568902 139941640753152 decoder_stack.py:224] dstack: ---- Layer 7 ----
+I0123 17:54:57.569011 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.569051 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.569083 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.710071 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.713274 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.719317 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.719621 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.722388 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.726384 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.726442 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.726481 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.726514 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.726581 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.727203 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.727283 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.727662 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.728459 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.731103 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.731743 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.731822 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.731858 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.731920 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.732049 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.732393 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.732437 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.734404 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.734500 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.737124 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.737203 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.737656 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.740006 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.741978 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.742085 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.742380 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.742464 139941640753152 decoder_stack.py:224] dstack: ---- Layer 8 ----
+I0123 17:54:57.742576 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.742617 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.742650 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.744619 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.747039 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.752772 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.753035 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.755774 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.759598 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.759654 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.759691 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.759723 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.759784 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.760350 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.760426 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.760794 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.761571 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.764199 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.764824 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.764901 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.764937 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.764999 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.765126 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.765450 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.765493 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.767415 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.767513 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.770146 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.770227 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.770662 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.772956 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.774962 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.775059 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.775371 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.775459 139941640753152 decoder_stack.py:224] dstack: ---- Layer 9 ----
+I0123 17:54:57.775573 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.775612 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.775645 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.777675 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.780149 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.785794 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.786063 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.789170 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.792962 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.793017 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.793055 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.793087 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.793152 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.793767 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.793845 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.794214 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.795002 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.797531 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.798168 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.798245 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.798280 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.798339 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.798470 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.798797 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.798840 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.800771 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.800863 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.803458 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.803537 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.803968 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.806313 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.808244 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.808337 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.808644 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.808730 139941640753152 decoder_stack.py:224] dstack: ---- Layer 10 ----
+I0123 17:54:57.808844 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.808884 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.808916 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.810780 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.813337 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.819007 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.819279 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.821964 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.825754 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.825809 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.825845 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.825877 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.825938 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.826509 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.826586 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.826956 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.827737 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.830271 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.830897 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.830975 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.831010 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.831071 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.831197 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.831517 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.831561 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.833533 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.833626 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.836430 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.836509 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.836939 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.839266 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.841157 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.841250 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.841543 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.841623 139941640753152 decoder_stack.py:224] dstack: ---- Layer 11 ----
+I0123 17:54:57.841756 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.841796 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.841827 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.843734 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.846153 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.851804 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.852061 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.854719 139941640753152 transformer_layer.py:213] tlayer: windowed attention.
+I0123 17:54:57.858571 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.858626 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.858662 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.858694 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.858757 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.859322 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.859397 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[1,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.859759 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.860567 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.863151 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.864182 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.864261 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.864298 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.864359 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.864486 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.864812 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.864856 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.866789 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.866883 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.869478 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.869557 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.870057 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.872394 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.874318 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.874413 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.874704 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.874999 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875082 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875159 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875218 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875274 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875331 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875385 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875438 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875492 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875545 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875598 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875651 139941640753152 transformer_layer.py:673] tlayer: Skipping XL cache update for mode init.
+I0123 17:54:57.875693 139941640753152 decoder_stack.py:344] dstack: Final layernorm.
+I0123 17:54:57.879290 139941640753152 decoder_stack.py:365] dstack: logits = Traced<ShapedArray(float32[32,1,1024])>with<DynamicJaxprTrace(level=1/0)>
+I0123 17:54:57.928297 139941640753152 decoder_stack.py:275] dstack: embeddings = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.928383 139941640753152 decoder_stack.py:333] dstack: autoregressive generator.
+I0123 17:54:57.928439 139941640753152 decoder_stack.py:224] dstack: ---- Layer 0 ----
+I0123 17:54:57.928545 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.928585 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.928617 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.928680 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.931164 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.936832 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.937093 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.939760 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:57.956812 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:57.956869 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:57.956907 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:57.956941 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.957004 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.958157 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.958236 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.958958 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.961058 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.965896 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.967219 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.967303 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:57.967340 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:57.967401 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.967529 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:57.967638 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:57.967677 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.969607 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.969712 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.972234 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.972313 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:57.972422 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:57.974714 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:57.976687 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.976783 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:57.977080 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.977161 139941640753152 decoder_stack.py:224] dstack: ---- Layer 1 ----
+I0123 17:54:57.977273 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:57.977313 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:57.977345 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:57.977426 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.979735 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:57.985259 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:57.985520 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:57.988255 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.001592 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.001655 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.001693 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.001725 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.001787 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.002346 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.002421 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.002784 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.003483 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.006022 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.006642 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.006718 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.006759 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.006823 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.006952 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.007061 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.007100 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.009058 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.009151 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.011585 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.011664 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.011773 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.014022 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.015952 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.016048 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.016342 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.016422 139941640753152 decoder_stack.py:224] dstack: ---- Layer 2 ----
+I0123 17:54:58.016534 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.016573 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.016605 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.016669 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.018969 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.024475 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.024739 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.027484 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.040379 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.040436 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.040473 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.040504 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.040566 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.041129 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.041206 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.041575 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.042287 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.044806 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.045432 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.045508 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.045544 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.045610 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.045749 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.045858 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.045897 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.047842 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.047937 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.050411 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.050495 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.050604 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.052832 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.054794 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.054890 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.055182 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.055264 139941640753152 decoder_stack.py:224] dstack: ---- Layer 3 ----
+I0123 17:54:58.055374 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.055413 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.055445 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.055510 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.057796 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.063308 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.063570 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.066299 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.079191 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.079248 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.079285 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.079318 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.079380 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.079930 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.080005 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.080361 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.081056 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.083602 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.084228 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.084304 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.084341 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.084405 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.084542 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.084652 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.084692 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.086676 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.086771 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.089219 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.089297 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.089406 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.091677 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.093566 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.093669 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.093961 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.094042 139941640753152 decoder_stack.py:224] dstack: ---- Layer 4 ----
+I0123 17:54:58.094155 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.094195 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.094227 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.094293 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.096920 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.102506 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.102774 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.105451 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.118425 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.118482 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.118519 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.118552 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.118614 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.119180 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.119255 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.119615 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.120318 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.122932 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.123563 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.123639 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.123675 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.123735 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.123870 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.123982 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.124022 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.125975 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.126068 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.128528 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.128607 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.128716 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.131048 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.132951 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.133046 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.133336 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.133416 139941640753152 decoder_stack.py:224] dstack: ---- Layer 5 ----
+I0123 17:54:58.133527 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.133567 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.133598 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.133669 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.135967 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.141537 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.141807 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.144565 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.165171 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.165254 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.165293 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.165326 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.165400 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.166019 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.166101 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.166485 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.167215 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.169874 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.170509 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.170591 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.170628 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.170693 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.170829 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.170955 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.170998 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.173092 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.173188 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.175746 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.175827 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.175940 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.178297 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.180206 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.180302 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.180592 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.180677 139941640753152 decoder_stack.py:224] dstack: ---- Layer 6 ----
+I0123 17:54:58.180793 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.180835 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.180866 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.180934 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.183251 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.188944 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.189212 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.191921 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.204985 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.205041 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.205078 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.205111 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.205178 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.205755 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.205832 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.206195 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.206891 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.209437 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.210445 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.210525 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.210561 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.210621 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.210755 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.210867 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.210912 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.212853 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.212950 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.215442 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.215522 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.215639 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.217939 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.219934 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.220030 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.220325 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.220407 139941640753152 decoder_stack.py:224] dstack: ---- Layer 7 ----
+I0123 17:54:58.220519 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.220560 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.220592 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.220658 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.222995 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.228573 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.228849 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.231628 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.244693 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.244749 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.244786 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.244818 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.244885 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.245491 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.245568 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.245942 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.246645 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.249180 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.249828 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.249906 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.249941 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.250002 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.250133 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.250243 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.250288 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.252233 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.252327 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.254863 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.254942 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.255051 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.257315 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.259240 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.259338 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.259632 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.259714 139941640753152 decoder_stack.py:224] dstack: ---- Layer 8 ----
+I0123 17:54:58.259825 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.259865 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.259897 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.259962 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.262263 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.267935 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.268201 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.270904 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.283911 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.283967 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.284004 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.284037 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.284099 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.284662 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.284739 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.285100 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.285813 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.288368 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.289046 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.289124 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.289160 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.289221 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.289355 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.289466 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.289505 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.291461 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.291556 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.294029 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.294108 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.294219 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.296479 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.298490 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.298587 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.298881 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.298962 139941640753152 decoder_stack.py:224] dstack: ---- Layer 9 ----
+I0123 17:54:58.299075 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.299114 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.299146 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.299211 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.301522 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.307069 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.307332 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.310092 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.323126 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.323181 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.323221 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.323254 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.323315 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.323914 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.323989 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.324349 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.325038 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.327562 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.328187 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.328263 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.328297 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.328355 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.328484 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.328592 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.328631 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.330516 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.330615 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.333087 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.333166 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.333275 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.335514 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.337398 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.337492 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.337788 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.337869 139941640753152 decoder_stack.py:224] dstack: ---- Layer 10 ----
+I0123 17:54:58.337980 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.338020 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.338051 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.338115 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.340367 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.345901 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.346164 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.348822 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.361553 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.361608 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.361650 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.361684 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.361746 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.362298 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.362374 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.362727 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.363418 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.365942 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.366757 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.366833 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.366868 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.366926 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.367052 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.367162 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.367201 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.369093 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.369192 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.371657 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.371737 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.371844 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.374074 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.376021 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.376115 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.376405 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.376486 139941640753152 decoder_stack.py:224] dstack: ---- Layer 11 ----
+I0123 17:54:58.376595 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.376634 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.376665 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.376728 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.378978 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.384431 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.384692 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.387429 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.400097 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.400153 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.400189 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.400220 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.400281 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.400834 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.400908 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.401264 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.402011 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.404521 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.405145 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.405220 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.405255 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.405312 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.405451 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.405563 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.405602 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.407482 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.407574 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.409996 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.410077 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.410186 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.412458 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.414357 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.414452 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.414739 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.414828 139941640753152 decoder_stack.py:344] dstack: Final layernorm.
+I0123 17:54:58.417730 139941640753152 decoder_stack.py:365] dstack: logits = Traced<ShapedArray(float32[32,1,1024])>with<DynamicJaxprTrace(level=3/0)>
+I0123 17:54:58.473808 139941640753152 decoder_stack.py:275] dstack: embeddings = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.473896 139941640753152 decoder_stack.py:333] dstack: autoregressive generator.
+I0123 17:54:58.473952 139941640753152 decoder_stack.py:224] dstack: ---- Layer 0 ----
+I0123 17:54:58.474061 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.474101 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.474132 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.474196 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.476898 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.482383 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.482649 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.485260 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.497852 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.497909 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.497946 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.497978 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.498041 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.498605 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.498683 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.499046 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.499728 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.502267 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.502890 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.502968 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.503005 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.503065 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.503193 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.503310 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.503350 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.505207 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.505301 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.507756 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.507837 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.507948 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.510234 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.512102 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.512198 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.512485 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.512566 139941640753152 decoder_stack.py:224] dstack: ---- Layer 1 ----
+I0123 17:54:58.512677 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.512717 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.512748 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.512812 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.515096 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.520559 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.520821 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.523522 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.536057 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.536115 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.536152 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.536184 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.536246 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.536804 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.536880 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.537242 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.537935 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.540484 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.541099 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.541175 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.541211 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.541271 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.541401 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.541511 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.541556 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.543435 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.543530 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.545981 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.546061 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.546174 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.548820 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.550735 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.550835 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.551132 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.551213 139941640753152 decoder_stack.py:224] dstack: ---- Layer 2 ----
+I0123 17:54:58.551323 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.551364 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.551396 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.551459 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.553744 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.559191 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.559455 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.562179 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.574687 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.574743 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.574781 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.574813 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.574874 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.575427 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.575504 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.575863 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.576549 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.579094 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.579710 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.579787 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.579823 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.579884 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.580013 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.580123 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.580163 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.582024 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.582118 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.584535 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.584614 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.584725 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.587455 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.589316 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.589411 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.589711 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.589794 139941640753152 decoder_stack.py:224] dstack: ---- Layer 3 ----
+I0123 17:54:58.589905 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.589945 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.589977 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.590043 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.592313 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.597759 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.598024 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.600723 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.613372 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.613427 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.613465 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.613504 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.613568 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.614144 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.614223 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.614600 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.615301 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.617868 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.618484 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.618559 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.618594 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.618654 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.618780 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.618888 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.618928 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.620815 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.620905 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.623315 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.623392 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.623500 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.625788 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.627694 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.627789 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.628082 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.628177 139941640753152 decoder_stack.py:224] dstack: ---- Layer 4 ----
+I0123 17:54:58.628291 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.628329 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.628360 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.628423 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.630698 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.636174 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.636432 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.639148 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.652005 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.652059 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.652095 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.652127 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.652190 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.652740 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.652814 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.653176 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.653890 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.656455 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.657077 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.657151 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.657186 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.657245 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.657370 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.657478 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.657516 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.659403 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.659501 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.661927 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.662004 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.662111 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.664411 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.666282 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.666376 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.666662 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.666742 139941640753152 decoder_stack.py:224] dstack: ---- Layer 5 ----
+I0123 17:54:58.666850 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.666888 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.666918 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.666981 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.669240 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.674711 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.674968 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.677674 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.690298 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.690353 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.690389 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.690420 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.690480 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.691039 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.691115 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.691477 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.692160 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.694745 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.695356 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.695431 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.695464 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.695523 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.695647 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.695758 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.695796 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.697692 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.697790 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.700223 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.700303 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.700411 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.703105 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.705024 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.705119 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.705406 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.705486 139941640753152 decoder_stack.py:224] dstack: ---- Layer 6 ----
+I0123 17:54:58.705594 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.705632 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.705670 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.705734 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.707997 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.713467 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.713737 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.716461 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.729141 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.729197 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.729233 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.729263 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.729324 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.729904 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.729979 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.730340 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.731040 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.733635 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.734270 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.734346 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.734381 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.734441 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.734570 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.734680 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.734719 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.736624 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.736717 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.739202 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.739281 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.739391 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.741704 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.743587 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.743682 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.743971 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.744050 139941640753152 decoder_stack.py:224] dstack: ---- Layer 7 ----
+I0123 17:54:58.744158 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.744196 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.744227 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.744289 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.746572 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.752112 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.752374 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.755117 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.767834 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.767888 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.767924 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.767954 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.768019 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.768579 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.768653 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.769016 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.769740 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.772341 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.772955 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.773030 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.773064 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.773130 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.773260 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.773369 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.773407 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.775309 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.775402 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.777853 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.777937 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.778049 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.780363 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.782246 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.782342 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.782629 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.782709 139941640753152 decoder_stack.py:224] dstack: ---- Layer 8 ----
+I0123 17:54:58.782816 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.782854 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.782885 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.782949 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.785210 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.790701 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.790961 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.793660 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.806356 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.806410 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.806445 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.806476 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.806536 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.807098 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.807172 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.807530 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.808222 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.810844 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.811470 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.811546 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.811580 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.811640 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.811766 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.811874 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.811912 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.813821 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.813914 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.816356 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.816439 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.816549 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.819245 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.821138 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.821231 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.821518 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.821597 139941640753152 decoder_stack.py:224] dstack: ---- Layer 9 ----
+I0123 17:54:58.821711 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.821751 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.821782 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.821845 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.824115 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.829598 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.829867 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.832563 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.845452 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.845507 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.845542 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.845573 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.845634 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.846206 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.846281 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.846643 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.847339 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.849929 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.850556 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.850630 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.850664 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.850722 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.850847 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.850956 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.850993 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.853367 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.853461 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.855890 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.855969 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.856093 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.858364 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.860215 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.860308 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.860594 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.860674 139941640753152 decoder_stack.py:224] dstack: ---- Layer 10 ----
+I0123 17:54:58.860780 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.860818 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.860849 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.860913 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.863205 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.868663 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.868925 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.871667 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.884394 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.884449 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.884484 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.884515 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.884576 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.885166 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.885240 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.885596 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.886301 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.888883 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.889503 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.889579 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.889614 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.889681 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.889815 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.889925 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.889964 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.891868 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.891960 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.894401 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.894479 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.894587 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.896885 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.898763 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.898856 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.899142 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.899221 139941640753152 decoder_stack.py:224] dstack: ---- Layer 11 ----
+I0123 17:54:58.899328 139941640753152 transformer_layer.py:154] tlayer: recurrent = False
+I0123 17:54:58.899366 139941640753152 transformer_layer.py:155] tlayer: compute_importance = False
+I0123 17:54:58.899396 139941640753152 transformer_layer.py:161] tlayer: compute keys,values,queries.
+I0123 17:54:58.899458 139941640753152 transformer_base.py:146] kvq: pre_attn xs = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.901713 139941640753152 transformer_base.py:161] kvq: pre_attn dropout.
+I0123 17:54:58.907195 139941640753152 transformer_base.py:173] kvq: queries = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.907455 139941640753152 transformer_base.py:194] kvq: normalize keys, queries.
+I0123 17:54:58.910186 139941640753152 transformer_layer.py:169] tlayer: using autoregressive decoder.
+I0123 17:54:58.922930 139941640753152 transformer_layer.py:299] tlayer: num_windows = 1.
+I0123 17:54:58.922986 139941640753152 attention.py:418] Single window, no scan.
+I0123 17:54:58.923021 139941640753152 transformer_layer.py:389] tlayer: self-attention.
+I0123 17:54:58.923052 139941640753152 attention.py:133] attn: keys = Traced<ShapedArray(bfloat16[32,1024,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.923113 139941640753152 attention.py:134] attn: queries = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.923676 139941640753152 attention.py:139] attn: content attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.923751 139941640753152 attention.py:143] attn: pbias = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.924114 139941640753152 attention.py:150] attn: learned attention scale: Traced<ShapedArray(bfloat16[8])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.924821 139941640753152 attention.py:161] attn: pre-softmax attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.927430 139941640753152 attention.py:177] attn: final attn = Traced<ShapedArray(bfloat16[32,8,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.928054 139941640753152 attention.py:182] attn: y = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.928129 139941640753152 transformer_layer.py:468] tlayer: End windows.
+I0123 17:54:58.928163 139941640753152 transformer_layer.py:472] tlayer: final FFN.
+I0123 17:54:58.928221 139941640753152 transformer_base.py:399] tbase: attn_ys = Traced<ShapedArray(bfloat16[32,1,8,128])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.928352 139941640753152 transformer_base.py:410] tbase: post-attention MLP.
+I0123 17:54:58.928466 139941640753152 nn_components.py:325] mlp: activation = None
+I0123 17:54:58.928505 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.930441 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.930536 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.932979 139941640753152 transformer_base.py:431] tbase: pre-FFN layernorm = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.933057 139941640753152 transformer_base.py:443] tbase: final FFN
+I0123 17:54:58.933166 139941640753152 nn_components.py:320] mlp: hidden 4096, relu
+I0123 17:54:58.935867 139941640753152 nn_components.py:329] mlp: final activation = None
+I0123 17:54:58.937785 139941640753152 nn_components.py:332] mlp: final = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.937879 139941640753152 nn_components.py:261] mlp: residual
+I0123 17:54:58.938170 139941640753152 transformer_base.py:450] tbase: ys = Traced<ShapedArray(bfloat16[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:54:58.938253 139941640753152 decoder_stack.py:344] dstack: Final layernorm.
+I0123 17:54:58.941130 139941640753152 decoder_stack.py:365] dstack: logits = Traced<ShapedArray(float32[32,1,1024])>with<DynamicJaxprTrace(level=2/0)>
+I0123 17:55:03.344781 139941640753152 optimizer_config.py:74] Using Flax Adafactor Optimizer. lr=1.000000, b1=0.900000
+I0123 17:55:03.922117 139941640753152 training_loop.py:409] No working directory specified.
+I0123 17:55:03.922233 139941640753152 training_loop.py:431] Loading pre-trained model from ag_ckpt_vocab:
+I0123 17:55:03.922987 139941640753152 checkpoints.py:1062] Restoring legacy Flax checkpoint from ag_ckpt_vocab/checkpoint_10999999
+I0123 17:55:07.268525 139941640753152 training_loop.py:447] Only restoring trainable parameters.
+I0123 17:55:07.269189 139941640753152 training_loop.py:724] parameter: decoder/embed/embedding, shape (1024, 1024), size 1048576
+I0123 17:55:07.269270 139941640753152 training_loop.py:724] parameter: decoder/final_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.269322 139941640753152 training_loop.py:724] parameter: decoder/transformer0/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.269369 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.269414 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269457 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.269497 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269536 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269575 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.269614 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.269662 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269705 139941640753152 training_loop.py:724] parameter: decoder/transformer0/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.269747 139941640753152 training_loop.py:724] parameter: decoder/transformer1/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.269786 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.269824 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269860 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.269898 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269935 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.269972 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.270009 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.270062 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270102 139941640753152 training_loop.py:724] parameter: decoder/transformer1/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.270139 139941640753152 training_loop.py:724] parameter: decoder/transformer10/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.270175 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.270212 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270247 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.270283 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270319 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270355 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.270392 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.270428 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270465 139941640753152 training_loop.py:724] parameter: decoder/transformer10/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.270501 139941640753152 training_loop.py:724] parameter: decoder/transformer11/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.270537 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.270573 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270609 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.270644 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270679 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270715 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.270750 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.270785 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270821 139941640753152 training_loop.py:724] parameter: decoder/transformer11/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.270857 139941640753152 training_loop.py:724] parameter: decoder/transformer2/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.270893 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.270930 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.270966 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271008 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271046 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271084 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.271120 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.271157 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271193 139941640753152 training_loop.py:724] parameter: decoder/transformer2/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271229 139941640753152 training_loop.py:724] parameter: decoder/transformer3/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.271264 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.271300 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271335 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271371 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271406 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271442 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.271477 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.271513 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271549 139941640753152 training_loop.py:724] parameter: decoder/transformer3/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271584 139941640753152 training_loop.py:724] parameter: decoder/transformer4/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.271621 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.271657 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271693 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271729 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271765 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271800 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.271836 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.271871 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.271907 139941640753152 training_loop.py:724] parameter: decoder/transformer4/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.271942 139941640753152 training_loop.py:724] parameter: decoder/transformer5/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.271984 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.272021 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272057 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.272092 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272128 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272164 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.272200 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.272236 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272272 139941640753152 training_loop.py:724] parameter: decoder/transformer5/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.272309 139941640753152 training_loop.py:724] parameter: decoder/transformer6/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.272344 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.272380 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272416 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.272452 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272488 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272524 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.272560 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.272596 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272632 139941640753152 training_loop.py:724] parameter: decoder/transformer6/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.272667 139941640753152 training_loop.py:724] parameter: decoder/transformer7/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.272703 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.272739 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272776 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.272813 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272850 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.272887 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.272923 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.272965 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273003 139941640753152 training_loop.py:724] parameter: decoder/transformer7/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.273039 139941640753152 training_loop.py:724] parameter: decoder/transformer8/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.273076 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.273112 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273148 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.273183 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273219 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273256 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.273292 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.273328 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273364 139941640753152 training_loop.py:724] parameter: decoder/transformer8/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.273400 139941640753152 training_loop.py:724] parameter: decoder/transformer9/relative_positions/rel_embedding, shape (8, 32), size 256
+I0123 17:55:07.273437 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/_kvq/attention_scale, shape (8,), size 8
+I0123 17:55:07.273473 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/_kvq/keys_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273509 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/_kvq/pre_attn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.273544 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/_kvq/queries_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273579 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/_kvq/values_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273615 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/ffn/hidden0/kernel, shape (1024, 4096), size 4194304
+I0123 17:55:07.273660 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/ffn/output_layer/kernel, shape (4096, 1024), size 4194304
+I0123 17:55:07.273704 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/post_attn_mlp/output_layer/kernel, shape (1024, 1024), size 1048576
+I0123 17:55:07.273742 139941640753152 training_loop.py:724] parameter: decoder/transformer9/tbase/pre_ffn_layernorm/scale, shape (1024,), size 1024
+I0123 17:55:07.273771 139941640753152 training_loop.py:725] Total parameters: 152072288
+I0123 17:55:07.274003 139941640753152 training_loop.py:739] Total state size: 0
+I0123 17:55:07.302335 139941640753152 training_loop.py:492] Training loop: creating task for mode beam_search
+I0123 17:55:07.302586 139941640753152 training_loop.py:685] Creating logging writer (train) for mode beam_search
+I0123 17:55:07.303002 139941640753152 training_loop.py:652] Compiling mode beam_search with jit.
+I0123 17:55:07.303348 139941640753152 training_loop.py:89] registering functions: dict_keys([])
+I0123 17:55:07.320737 139941640753152 graph.py:499] a b c = triangle a b c; d = circle d a b c; e = on_circle e d b; f = on_line f c e, on_line f b a; g = on_line g c b, on_line g e a; h = foot h f c b; i = foot i f a e; j = midpoint j b e; k = midpoint k g f; l = midpoint l b f; m = midpoint m e f ? cyclic j l h k
